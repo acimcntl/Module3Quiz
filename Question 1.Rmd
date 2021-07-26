@@ -23,6 +23,13 @@ knitr::opts_chunk$set(echo = TRUE)
 #### The life in hours of a battery is known to be approximately normally distributed with standard deviation 𝜎=1.25 hours. A random sample of 10 batteries has a mean life of 𝑥¯=40.5 hours.
 
 ---
+<center>
+```{r}
+x <- seq(30, 50, length=500)
+y <- dnorm(x, mean = 40, sd = 1.25)
+plot(x,y, main = "The Normal Distribution of the Life in Hours of Batteries", col = "green",type="l")
+```
+</center>
 
 #### Given: 
 $$𝜎=1.25 hours

@@ -1,0 +1,79 @@
+---
+title: "Module 3 Quiz"
+author: "Angeline Cantal"
+date: "7/22/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<center>
+  
+## Module 3 Quiz: Question 2
+  
+![](/Users/angelinemicaela/Desktop/images/gas.jpg)
+</center>
+  
+  
+  
+#### Brand A gasoline was used in 16 similar automobiles under identical conditions. The corresponding sample of 16 values (miles per gallon) had mean 19.6 and standard deviation 0.4. Under the same conditions, high-power brand B gasoline gave a sample of 16 values with mean 20.2 and standard deviation 0.6. Is the mileage of B significantly better than that of A? Assume normality. Test the hypothesis using both P-value and fixed significance level with 𝛼=0.05 approaches (if possible).
+
+---
+  
+#### Given:
+
+$$n= 16
+\\
+\alpha= 0.05
+\\
+\overline {x}_1= 19.6
+\\
+\overline {x}_2= 20.2
+\\
+s_1= 0.4
+\\
+s_2= 0.6$$
+
+First we need to establish our null and alternative hypothesis. Since we are trying to figure out if the mileage of B significantly better than that of A, our null hypothesis is when μ1 is equals to μ2. On the other hand, the alternative hypothesis is when μ1 is less than μ2.  
+
+
+$$H_0: \mu_1 = \mu_2  
+\\
+H_1: \mu_1 < \mu_2$$
+
+
+Next we will figure out what test statistic to use. We will use this formula:
+
+$$ Z_0 = \frac{(\overline {x}_1 - \overline {x}_2)} {\sqrt{{\frac {s_1^2}{n_1} + \frac {s_2^2}{n_2} }}} $$
+
+Inputting the values into the formula,
+
+$$ Z_0 = \frac{(19.6 - 20.2)} {\sqrt{{\frac {0.4^2}{16} + \frac {0.6^2}{16} }}}
+\\
+= \frac{-0.6}{\frac {\sqrt{13}}{20}} = -3.282 ≈ -3.33$$
+
+  
+Since we are given the significance level of a= 0.05, the critical value is t= -1.7 according to the t table. We can see that the test statistic is less than the critical value.
+
+$$-3.33 < -1.7$$
+  
+Now, we will also look for the p-value to further confirm our conclusions. 
+  
+  $$ 1 - 0.999566 = 0.000434 
+  \\
+  0.000454 < \alpha$$
+  
+> **Final answer**: With all of this, we must reject Ho. We can then conclude that the mileage of B is significantly better than that of A.
+
+
+---
+  
+#### References:
+
+Used these cheatsheets to code the equations, formulas, and solutions:  
+  
+  
+https://rmd4sci.njtierney.com/math  
+  
+https://rpruim.github.io/s341/S19/from-class/MathinRmd.html
