@@ -1,0 +1,171 @@
+---
+title: "Module 3 Quiz"
+author: "Angeline Cantal"
+date: "7/26/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<center>
+  
+## Module 3 Quiz: Question 1   
+
+  
+![](/Users/angelinemicaela/Desktop/images/battery.png) 
+  
+ </center>
+  
+  
+  
+#### The life in hours of a battery is known to be approximately normally distributed with standard deviation 𝜎=1.25 hours. A random sample of 10 batteries has a mean life of 𝑥¯=40.5 hours.
+
+---
+
+#### Given: 
+$$𝜎=1.25 hours
+\\
+ n = 10 batteries
+ \\
+\overline {x} = 40.5 hours
+\\
+𝛼= 0.05  $$
+
+---
+
+#### A. Is there evidence to support the claim that battery life exceeds 40 hours? Use 𝛼=0.05.
+
+In this question, we are asked to know whether the battery life exceeds 40 hours. Based on the given in the problem, we know that the life in hours of a battery is approximately normally distributed with a standard deviation of 𝜎**=1.25 hours**.
+
+
+First we must specify the null and alternative hypothesis. The **null hypothesis (Ho)** is said to be a statement of no effect, relationship, or difference between groups or factors. On the other hand, the **alternative hypothesis (H1)** is the statement that signifies that there is an effect or difference.
+
+
+With this definition, we can say that the **null hypothesis is when μ is less than or equal to 40** since this states that there is no difference. In other words, it says that the battery life cannot exceed 40 hours. We are actually trying to disprove this null hypothesis. Given this, our **alternative hypothesis is that μ is greater than 40**.
+
+
+$$H_o: \mu ≤ 40
+\\
+H_1: \mu > 40$$
+
+
+Now that we have our null and alternative hypothesis, we must now determine the **test statistic value**. The formula we should use is the **z-test formula**:
+
+$$Z = \frac{\overline {x} -\mu}{𝜎/√n}$$
+
+Inputting our values,   
+
+$$ Z = \frac{40.5 -40}{1.25/√10} = 1.265 $$
+
+Now, we have to calculate our p-value. We know that this is a right-tailed test.
+
+$$ P(Z>1.265)= 1-P(Z<1.265)
+\\
+= 1-0.897
+\\
+=0.1029$$
+
+We can then see that the test statistic we have solved for is greater than our critical value.
+
+$$1.265 > 0.1029$$ 
+
+> **Final answer**: We now have evidence to fail to reject the null hypothesis. We can conclude that there is not enought evidence to support the claims that the battery life exceeds 40 hours.  
+  
+
+---
+
+#### B. What is the P-value for the test in part A?
+
+
+We know that our alternative hypothesis from Part A is a right tailed test since the hypothesis contains a greater than (>) symbol. 
+$$ P(Z>1.265)= 1-P(Z<1.265)
+\\
+= 1-0.897
+\\
+=0.1029$$
+
+
+> **Final answer**: The p-value for the test in part A is 0.1029.  
+  
+---
+  
+#### C. What is the 𝛽-error for the text in part B if the true mean life is 42 hours?
+
+We will use this formula to find the 𝛽-error:
+
+$$\beta = P (Z < Z_\alpha- \frac{(x -\mu) \sqrt{n}}{𝜎})$$
+
+We know that Z𝛼= 1.645. Inputting our values:
+
+$$\beta = P (Z < 1.645- \frac{(42-40) \sqrt{10}}{1.25}) 
+\\
+= P( Z < 1.645 - 5.059644256 )
+\\
+= P ( Z < -3.414790256) ≈ 0.000326$$
+
+> **Final answer**: The value of the 𝛽-error if the true mean life is 42 hours is 0.000326.
+
+---
+
+#### D. What sample size would be required to ensure that 𝛽 does not exceed 0.10 if the true mean is 44 hours?
+
+
+We know that this is a type II error and our goal is to make sure that it does not exceed 0.10 if the true mean is 44 hours.
+
+We will be using this formula to get the sample size:
+
+$$ n = \frac{(Z_\alpha + Z_\beta)^2 \sigma^2}{(x - \mu)^2}$$
+
+Since we want β to be less than 1, 
+
+$$ Z_(1-0.1) ≈ 1.282 $$
+Inputting these values,
+
+$$ n = \frac{(1.645 + 1.282)^2 1.25^2}{(44 - 40)^2}
+\\
+n = 0.8366532227 ≈ 1 $$  
+
+
+> **Final answer**: The sample size required to ensure that 𝛽 does not exceed 0.10 if the true mean is 44 hours is 1.  
+
+---
+
+#### E. Explain how you could answer the question in part A by calculating an appropriate confidence bound on battery life.
+
+We will be using this formula:
+
+$$ \overline{x} \pm \frac{Z_a \sigma}{\sqrt {n}} $$
+When we input the values,
+
+$$ 40.5 + \frac{(1.645) (1.25)}{\sqrt {10}}
+\\
+= 41.15024334 ≈ 41.15$$
+
+
+Our confidence interval will be 
+
+$$
+\\ (-\infty , 41.15)
+$$
+
+> **Final answer**: 40.5 is within the confidence interval. Therefore, we do not have enough evidence to reject the null hypothesis.  
+
+---
+
+#### References:
+
+Got some information about the definition of terms mentioned here:  
+  
+  
+ https://www.nedarc.org/statisticalhelp/advancedstatisticaltopics/hypothesisTesting.html
+  
+  
+Used these cheatsheets to code the equations, formulas, and solutions: 
+  
+  
+https://rmd4sci.njtierney.com/math  
+  
+  
+https://rpruim.github.io/s341/S19/from-class/MathinRmd.html
